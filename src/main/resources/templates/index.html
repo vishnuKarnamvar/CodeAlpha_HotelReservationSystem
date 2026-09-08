@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        StayNest | Hotel Reservation
+    </title>
+
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================
+     HEADER
+====================================== -->
+
+<header>
+
+    <div class="logo">
+        ✦ StayNest
+    </div>
+
+
+    <nav>
+
+        <a href="#rooms">
+            Rooms
+        </a>
+
+        <a href="#manage">
+            My Booking
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+    </nav>
+
+
+    <button onclick="scrollToRooms()">
+
+        Book a stay
+
+    </button>
+
+</header>
+
+
+
+<!-- ======================================
+     HERO
+====================================== -->
+
+<section class="hero">
+
+    <div>
+
+        <small>
+            LUXURY • COMFORT • EXPERIENCE
+        </small>
+
+
+        <h1>
+
+            Your stay,
+            <br>
+
+            <i>
+                beautifully
+            </i>
+
+            simplified.
+
+        </h1>
+
+
+        <p>
+
+            Search live room availability,
+            reserve your room and manage
+            your booking from one beautiful
+            website.
+
+        </p>
+
+
+        <button
+                class="dark"
+                onclick="scrollToRooms()">
+
+            Explore rooms →
+
+        </button>
+
+
+        <span class="live">
+
+            ● Live availability
+
+        </span>
+
+    </div>
+
+
+    <div class="hero-photo">
+
+        <span>
+
+            ★ 4.9 guest rating
+
+        </span>
+
+
+        <div>
+
+            <small>
+                THE STAYNEST EXPERIENCE
+            </small>
+
+
+            <h2>
+
+                Rest.
+                Recharge.
+                Repeat.
+
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================
+     SEARCH
+====================================== -->
+
+<section
+        class="search"
+        id="rooms">
+
+
+    <div class="search-title">
+
+        <b>
+            Find your room
+        </b>
+
+        <span>
+            Availability updates automatically
+        </span>
+
+    </div>
+
+
+    <div class="search-grid">
+
+
+        <label>
+
+            CHECK-IN
+
+            <input
+                    type="date"
+                    id="checkIn">
+
+        </label>
+
+
+
+        <label>
+
+            CHECK-OUT
+
+            <input
+                    type="date"
+                    id="checkOut">
+
+        </label>
+
+
+
+        <label>
+
+            ROOM TYPE
+
+            <select id="roomType">
+
+                <option value="ALL">
+                    All rooms
+                </option>
+
+                <option value="STANDARD">
+                    Standard
+                </option>
+
+                <option value="DELUXE">
+                    Deluxe
+                </option>
+
+                <option value="SUITE">
+                    Suite
+                </option>
+
+            </select>
+
+        </label>
+
+
+
+        <button
+                class="dark"
+                onclick="loadRooms()">
+
+            Search rooms
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================
+     STATISTICS
+====================================== -->
+
+<section class="stats">
+
+
+    <div>
+
+        <b id="roomsCount">
+            —
+        </b>
+
+        <span>
+            rooms
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <b id="bookingsCount">
+            —
+        </b>
+
+        <span>
+            active bookings
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <b id="customersCount">
+            —
+        </b>
+
+        <span>
+            guests
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ======================================
+     ROOMS
+====================================== -->
+
+<section class="rooms-section">
+
+
+    <div class="heading">
+
+        <div>
+
+            <small>
+                STAY YOUR WAY
+            </small>
+
+
+            <h2>
+                Rooms made for you
+            </h2>
+
+        </div>
+
+
+        <span>
+            ● Updating live
+        </span>
+
+    </div>
+
+
+    <div
+            id="roomGrid"
+            class="room-grid">
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ======================================
+     MANAGE BOOKING
+====================================== -->
+
+<section
+        class="manage"
+        id="manage">
+
+
+    <div>
+
+        <small>
+            MANAGE YOUR STAY
+        </small>
+
+
+        <h2>
+            Already booked?
+        </h2>
+
+
+        <p>
+
+            Enter your booking ID
+            to view or cancel your
+            reservation.
+
+        </p>
+
+    </div>
+
+
+    <div class="lookup">
+
+
+        <input
+                id="bookingId"
+                placeholder="e.g. HB-12345678">
+
+
+        <button
+                onclick="lookupBooking()">
+
+            View booking
+
+        </button>
+
+
+    </div>
+
+
+    <div id="bookingResult">
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ======================================
+     ABOUT
+====================================== -->
+
+<section
+        class="about"
+        id="about">
+
+
+    <small>
+        WHY STAYNEST
+    </small>
+
+
+    <h2>
+
+        Everything you need
+        for a smoother stay.
+
+    </h2>
+
+
+    <div class="features">
+
+
+        <div>
+
+            <b>
+                01
+            </b>
+
+
+            <h3>
+                Real-time availability
+            </h3>
+
+
+            <p>
+
+                The website checks the
+                MySQL-backed reservation
+                data automatically.
+
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <b>
+                02
+            </b>
+
+
+            <h3>
+                Instant confirmation
+            </h3>
+
+
+            <p>
+
+                Complete the booking form
+                and receive a booking ID
+                and simulated transaction.
+
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <b>
+                03
+            </b>
+
+
+            <h3>
+                Easy management
+            </h3>
+
+
+            <p>
+
+                Look up and cancel active
+                reservations from the same page.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ======================================
+     FOOTER
+====================================== -->
+
+<footer>
+
+    <span>
+        ✦ StayNest
+    </span>
+
+
+    <span>
+        Java • Spring Boot • MySQL • OOP
+    </span>
+
+</footer>
+
+
+
+<!-- ======================================
+     BOOKING MODAL
+====================================== -->
+
+<div
+        class="modal"
+        id="modal">
+
+
+    <div class="modal-card">
+
+
+        <button
+                class="x"
+                onclick="closeModal()">
+
+            ×
+
+        </button>
+
+
+        <small>
+            RESERVE YOUR ROOM
+        </small>
+
+
+        <h2 id="modalTitle">
+            Room
+        </h2>
+
+
+        <p id="modalMeta">
+        </p>
+
+
+
+        <form
+                onsubmit="submitBooking(event)">
+
+
+            <input
+                    type="hidden"
+                    id="selectedRoomId">
+
+
+
+            <div class="form-grid">
+
+
+                <label>
+
+                    FULL NAME
+
+                    <input
+                            required
+                            id="name"
+                            placeholder="Your name">
+
+                </label>
+
+
+
+                <label>
+
+                    PHONE
+
+                    <input
+                            required
+                            id="phone"
+                            placeholder="Phone number">
+
+                </label>
+
+
+
+                <label>
+
+                    EMAIL
+
+                    <input
+                            required
+                            type="email"
+                            id="email"
+                            placeholder="Email address">
+
+                </label>
+
+
+
+                <label>
+
+                    PAYMENT
+
+                    <select id="payment">
+
+                        <option value="UPI">
+                            UPI
+                        </option>
+
+                        <option value="CARD">
+                            Card
+                        </option>
+
+                        <option value="CASH">
+                            Cash
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+
+                <label>
+
+                    CHECK-IN
+
+                    <input
+                            required
+                            type="date"
+                            id="modalIn">
+
+                </label>
+
+
+
+                <label>
+
+                    CHECK-OUT
+
+                    <input
+                            required
+                            type="date"
+                            id="modalOut">
+
+                </label>
+
+
+            </div>
+
+
+
+            <div
+                    class="total"
+                    id="total">
+
+                Choose dates.
+
+            </div>
+
+
+
+            <button
+                    class="dark full">
+
+                Confirm & simulate payment
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+</div>
+
+
+
+<div id="toast">
+</div>
+
+
+<script src="/js/app.js">
+</script>
+
+
+</body>
+
+</html>

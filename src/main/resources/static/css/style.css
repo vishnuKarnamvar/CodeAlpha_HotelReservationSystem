@@ -1,0 +1,1563 @@
+@import url(
+'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap'
+);
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: #f4f1e9;
+
+    color: #19211f;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+}
+
+
+button,
+input,
+select {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+/* ==================================
+   HEADER
+================================== */
+
+header {
+
+    height: 76px;
+
+    background: #fffdf8;
+
+    border-bottom:
+        1px solid #ddd8cc;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+nav a {
+
+    color: #68716c;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+header button,
+.dark {
+
+    border: 0;
+
+    background: #19211f;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 4px;
+
+    font-weight: 600;
+
+}
+
+
+
+/* ==================================
+   HERO
+================================== */
+
+.hero {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 75px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 7%;
+
+    align-items: center;
+
+}
+
+
+.hero small,
+.rooms-section small,
+.manage small,
+.about small {
+
+    letter-spacing: 2px;
+
+    color: #ae6b49;
+
+    font-weight: 700;
+
+    font-size: 10px;
+
+}
+
+
+.hero h1 {
+
+    font:
+        600
+        clamp(48px, 6vw, 78px)
+        / 1
+        "Playfair Display",
+        serif;
+
+    margin: 18px 0;
+
+}
+
+
+.hero h1 i {
+
+    color: #ae6b49;
+
+}
+
+
+.hero p {
+
+    color: #68716c;
+
+    line-height: 1.8;
+
+    max-width: 520px;
+
+}
+
+
+.live {
+
+    font-size: 12px;
+
+    color: #4d795f;
+
+    margin-left: 20px;
+
+}
+
+
+.hero-photo {
+
+    height: 500px;
+
+    background:
+        linear-gradient(
+            140deg,
+            #b89d84,
+            #56665f 70%,
+            #2d3c37
+        );
+
+    position: relative;
+
+    color: white;
+
+    padding: 18px;
+
+}
+
+
+.hero-photo > span {
+
+    background: white;
+
+    color: #19211f;
+
+    padding: 9px;
+
+    font-size: 11px;
+
+    float: right;
+
+}
+
+
+.hero-photo div {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 35px;
+
+}
+
+
+.hero-photo h2 {
+
+    font:
+        600
+        31px
+        "Playfair Display",
+        serif;
+
+}
+
+
+
+/* ==================================
+   SEARCH
+================================== */
+
+.search {
+
+    background: #fffdf8;
+
+    margin: 0 7%;
+
+    padding: 27px 30px;
+
+    border:
+        1px solid #ddd8cc;
+
+    box-shadow:
+        0 15px 45px #1b241b12;
+
+}
+
+
+.search-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+}
+
+
+.search-title span {
+
+    font-size: 12px;
+
+    color: #68716c;
+
+}
+
+
+.search-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr auto;
+
+    gap: 13px;
+
+}
+
+
+.search label,
+.form-grid label {
+
+    font-size: 10px;
+
+    color: #68716c;
+
+    font-weight: 700;
+
+    display: grid;
+
+    gap: 7px;
+
+}
+
+
+.search input,
+.search select,
+.form-grid input,
+.form-grid select,
+.lookup input {
+
+    border:
+        1px solid #ddd8cc;
+
+    background: white;
+
+    padding: 13px;
+
+    border-radius: 4px;
+
+    outline: 0;
+
+}
+
+
+
+/* ==================================
+   STATISTICS
+================================== */
+
+.stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 100px;
+
+    text-align: center;
+
+    padding: 45px;
+
+}
+
+
+.stats div {
+
+    display: grid;
+
+    gap: 4px;
+
+}
+
+
+.stats b {
+
+    font:
+        600
+        30px
+        "Playfair Display",
+        serif;
+
+}
+
+
+.stats span {
+
+    font-size: 11px;
+
+    color: #68716c;
+
+}
+
+
+
+/* ==================================
+   ROOMS
+================================== */
+
+.rooms-section {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding:
+        25px 7% 85px;
+
+}
+
+
+.heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 28px;
+
+}
+
+
+.heading h2,
+.manage h2,
+.about h2 {
+
+    font:
+        600
+        43px
+        "Playfair Display",
+        serif;
+
+    margin: 10px 0;
+
+}
+
+
+.heading > span {
+
+    font-size: 11px;
+
+    color: #4d795f;
+
+}
+
+
+.room-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.room {
+
+    background: #fffdf8;
+
+    border:
+        1px solid #ddd8cc;
+
+}
+
+
+.photo {
+
+    height: 175px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d0bca5,
+            #66736c
+        );
+
+    position: relative;
+
+}
+
+
+.photo.deluxe {
+
+    background:
+        linear-gradient(
+            135deg,
+            #c6a57c,
+            #526762
+        );
+
+}
+
+
+.photo.suite {
+
+    background:
+        linear-gradient(
+            135deg,
+            #9e907b,
+            #344841
+        );
+
+}
+
+
+.badge {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    background: #e9f2eb;
+
+    color: #3c704f;
+
+    padding: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.room-info {
+
+    padding: 20px;
+
+}
+
+
+.room-info h3 {
+
+    font:
+        600
+        25px
+        "Playfair Display",
+        serif;
+
+    margin: 7px 0;
+
+}
+
+
+.room-info p {
+
+    font-size: 12px;
+
+    color: #68716c;
+
+    line-height: 1.6;
+
+    min-height: 40px;
+
+}
+
+
+.room-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+
+}
+
+
+.reserve {
+
+    background: transparent;
+
+    border:
+        1px solid #19211f;
+
+    padding: 9px 12px;
+
+}
+
+
+.reserve:hover {
+
+    background: #19211f;
+
+    color: white;
+
+}
+
+
+
+/* ==================================
+   MANAGE
+================================== */
+
+.manage {
+
+    margin:
+        0 7% 80px;
+
+    background: #19211f;
+
+    color: white;
+
+    padding: 50px 6%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+
+    align-items: center;
+
+}
+
+
+.manage p {
+
+    color: #adb5b0;
+
+}
+
+
+.lookup {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.lookup input {
+
+    flex: 1;
+
+}
+
+
+.lookup button {
+
+    border: 0;
+
+    background: #ae6b49;
+
+    color: white;
+
+    padding: 12px 17px;
+
+}
+
+
+.result {
+
+    grid-column: 1 / -1;
+
+    border-top:
+        1px solid #444d48;
+
+    padding-top: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.result span {
+
+    font-size: 10px;
+
+    color: #aab2ad;
+
+}
+
+
+.result b {
+
+    display: block;
+
+    color: white;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+}
+
+
+.cancel {
+
+    grid-column: 1 / -1;
+
+    background: transparent;
+
+    color: #e5a58c;
+
+    border:
+        1px solid #a75f48;
+
+    padding: 9px;
+
+    width: max-content;
+
+}
+
+
+
+/* ==================================
+   ABOUT
+================================== */
+
+.about {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding:
+        25px 7% 90px;
+
+}
+
+
+.about h2 {
+
+    max-width: 650px;
+
+}
+
+
+.features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+
+}
+
+
+.features div {
+
+    border-top:
+        1px solid #ddd8cc;
+
+    padding-top: 18px;
+
+}
+
+
+.features b {
+
+    color: #ae6b49;
+
+}
+
+
+.features p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #68716c;
+
+}
+
+
+
+/* ==================================
+   FOOTER
+================================== */
+
+footer {
+
+    background: #e9e5dc;
+
+    padding: 25px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #68716c;
+
+    font-size: 12px;
+
+}
+
+
+
+/* ==================================
+   MODAL
+================================== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        #121916aa;
+
+    z-index: 30;
+
+    padding: 20px;
+
+    overflow: auto;
+
+}
+
+
+.modal.open {
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+.modal-card {
+
+    background: #fffdf8;
+
+    width:
+        min(650px, 100%);
+
+    padding: 35px;
+
+    position: relative;
+
+}
+
+
+.x {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 8px;
+
+    background: none;
+
+    border: 0;
+
+    font-size: 30px;
+
+}
+
+
+.modal-card h2 {
+
+    font:
+        600
+        35px
+        "Playfair Display",
+        serif;
+
+    margin: 8px 0;
+
+}
+
+
+.modal-card p {
+
+    color: #68716c;
+
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 14px;
+
+}
+
+
+.total {
+
+    margin: 18px 0;
+
+    background: #eeeae0;
+
+    padding: 15px;
+
+    font-weight: 700;
+
+}
+
+
+.full {
+
+    width: 100%;
+
+}
+
+
+
+/* ==================================
+   TOAST
+================================== */
+
+#toast {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+
+    background: #19211f;
+
+    color: white;
+
+    padding: 13px 18px;
+
+    transform:
+        translateY(100px);
+
+    transition: .2s;
+
+    z-index: 50;
+
+}
+
+
+#toast.show {
+
+    transform: none;
+
+}
+
+
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media(max-width:800px) {
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero-photo {
+
+        height: 330px;
+
+    }
+
+
+    .search-grid,
+    .room-grid,
+    .features {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .manage {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .result {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media(max-width:520px) {
+
+    .search-grid,
+    .room-grid,
+    .features,
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .stats {
+
+        gap: 25px;
+
+        flex-direction: column;
+
+    }
+
+
+    .lookup {
+
+        flex-direction: column;
+
+    }
+
+
+    .hero,
+    .rooms-section,
+    .about {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+
+    .search,
+    .manage {
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+    }
+
+}
+/* =========================================
+   CSS-ONLY ROOM VISUALS
+========================================= */
+
+.photo {
+    height: 175px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #d8c7aa,
+        #7d8b82
+    );
+}
+
+/* Window */
+.photo::before {
+    content: "";
+    position: absolute;
+
+    width: 110px;
+    height: 75px;
+
+    top: 28px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 48%,
+            rgba(255,255,255,.5) 49%,
+            rgba(255,255,255,.5) 51%,
+            transparent 52%
+        ),
+        linear-gradient(
+            0deg,
+            transparent 48%,
+            rgba(255,255,255,.5) 49%,
+            rgba(255,255,255,.5) 51%,
+            transparent 52%
+        ),
+        linear-gradient(
+            135deg,
+            #c9e1e5,
+            #f1e5c9
+        );
+
+    border: 5px solid rgba(255,255,255,.75);
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+/* Bed */
+.photo::after {
+    content: "";
+    position: absolute;
+
+    width: 190px;
+    height: 55px;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            #eee8dc 0 65%,
+            #b89b78 66% 100%
+        );
+
+    border-radius: 5px 5px 10px 10px;
+
+    box-shadow:
+        0 8px 12px rgba(0,0,0,.25);
+}
+
+/* STANDARD */
+.photo.standard {
+    background: linear-gradient(
+        135deg,
+        #d7c7ad,
+        #8b9187
+    );
+}
+
+/* DELUXE */
+.photo.deluxe {
+    background: linear-gradient(
+        135deg,
+        #cbb58d,
+        #536960
+    );
+}
+
+/* SUITE */
+.photo.suite {
+    background: linear-gradient(
+        135deg,
+        #b9a98e,
+        #47584e
+    );
+}
+/* =========================================
+   CSS HOTEL ROOM SCENE
+   NO IMAGES REQUIRED
+========================================= */
+
+.photo {
+    height: 175px;
+    position: relative;
+    overflow: hidden;
+    background: #8b8779 !important;
+}
+
+/* Room scene */
+.room-scene {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+/* =========================
+   WALL
+========================= */
+
+.photo.standard {
+    background: linear-gradient(
+        135deg,
+        #d5c8b4,
+        #858b83
+    ) !important;
+}
+
+.photo.deluxe {
+    background: linear-gradient(
+        135deg,
+        #cbb58d,
+        #566960
+    ) !important;
+}
+
+.photo.suite {
+    background: linear-gradient(
+        135deg,
+        #b8a88e,
+        #46584f
+    ) !important;
+}
+
+/* =========================
+   WINDOW
+========================= */
+
+.window {
+    position: absolute;
+
+    width: 105px;
+    height: 68px;
+
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        135deg,
+        #d9edf0,
+        #f5dfb9
+    );
+
+    border: 6px solid #eee9dc;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.25);
+}
+
+/* Window cross */
+.window-line {
+    position: absolute;
+    background: rgba(255,255,255,.8);
+}
+
+.window-line.vertical {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+}
+
+.window-line.horizontal {
+    height: 3px;
+    width: 100%;
+    top: 50%;
+}
+
+/* =========================
+   BED
+========================= */
+
+.bed {
+    position: absolute;
+
+    width: 185px;
+    height: 55px;
+
+    bottom: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+/* Mattress */
+.blanket {
+    position: absolute;
+
+    width: 185px;
+    height: 35px;
+
+    bottom: 0;
+
+    background: #eee8dc;
+
+    border-radius: 5px 5px 8px 8px;
+
+    box-shadow:
+        0 7px 10px rgba(0,0,0,.25);
+}
+
+/* Pillow */
+.pillow {
+    position: absolute;
+
+    width: 55px;
+    height: 22px;
+
+    top: 2px;
+    left: 18px;
+
+    background: #fffdf7;
+
+    border-radius: 5px;
+}
+
+/* Bed frame */
+.bed-base {
+    position: absolute;
+
+    width: 195px;
+    height: 10px;
+
+    bottom: -7px;
+    left: -5px;
+
+    background: #72583f;
+
+    border-radius: 2px;
+}
+
+/* =========================
+   SIDE TABLE
+========================= */
+
+.side-table {
+    position: absolute;
+
+    width: 35px;
+    height: 28px;
+
+    bottom: 20px;
+    left: calc(50% + 105px);
+
+    background: #765d45;
+
+    box-shadow:
+        0 5px 8px rgba(0,0,0,.2);
+}
+
+/* =========================
+   LAMP
+========================= */
+
+.lamp {
+    position: absolute;
+
+    width: 20px;
+    height: 15px;
+
+    top: -17px;
+    left: 7px;
+
+    background: #ead6a9;
+
+    border-radius: 12px 12px 3px 3px;
+
+    box-shadow:
+        0 0 12px rgba(255,220,150,.6);
+}
+
+/* Lamp stand */
+.lamp::after {
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+    height: 10px;
+
+    background: #594b3c;
+
+    left: 9px;
+    top: 14px;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.photo .badge {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 20;
+}
+/* =========================================
+   HOTEL ROOM CSS VISUAL
+   NO IMAGE FILES REQUIRED
+========================================= */
+
+.photo {
+    height: 175px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: linear-gradient(135deg, #cdbda4, #66766d) !important;
+}
+
+/* Room background */
+.css-room {
+    position: absolute;
+    inset: 0;
+}
+
+/* Different room colors */
+.photo.standard {
+    background: linear-gradient(135deg, #d5c6ad, #7d887f) !important;
+}
+
+.photo.deluxe {
+    background: linear-gradient(135deg, #c8b28a, #53675e) !important;
+}
+
+.photo.suite {
+    background: linear-gradient(135deg, #b9a98d, #46594f) !important;
+}
+
+/* Window */
+.room-window {
+    position: absolute;
+    width: 105px;
+    height: 65px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        135deg,
+        #d8edf0,
+        #f4dfb7
+    );
+
+    border: 6px solid #eee9dc;
+
+    box-shadow: 0 5px 12px rgba(0,0,0,.25);
+}
+
+/* Window vertical */
+.window-cross-v {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    background: rgba(255,255,255,.8);
+}
+
+/* Window horizontal */
+.window-cross-h {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    background: rgba(255,255,255,.8);
+}
+
+/* Bed */
+.room-bed {
+    position: absolute;
+    width: 190px;
+    height: 65px;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+}
+
+/* Headboard */
+.bed-head {
+    position: absolute;
+    width: 190px;
+    height: 18px;
+    top: 0;
+    background: #755d48;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Pillow */
+.bed-pillow {
+    position: absolute;
+    width: 55px;
+    height: 22px;
+    top: 8px;
+    left: 18px;
+    background: #fffdf7;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+/* Bedsheet */
+.bed-sheet {
+    position: absolute;
+    width: 190px;
+    height: 38px;
+    bottom: 5px;
+    background: #eee8dc;
+    border-radius: 4px 4px 8px 8px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.25);
+    z-index: 1;
+}
+
+/* Bed frame */
+.bed-frame {
+    position: absolute;
+    width: 200px;
+    height: 9px;
+    bottom: 0;
+    left: -5px;
+    background: #604b38;
+}
+
+/* Side table */
+.room-table {
+    position: absolute;
+    width: 35px;
+    height: 32px;
+    bottom: 18px;
+    left: calc(50% + 110px);
+    background: #765d45;
+}
+
+/* Lamp */
+.table-lamp {
+    position: absolute;
+    width: 23px;
+    height: 17px;
+    top: -19px;
+    left: 6px;
+    background: #efd7a5;
+    border-radius: 12px 12px 3px 3px;
+    box-shadow: 0 0 15px rgba(255,220,150,.8);
+}
+
+/* Lamp stand */
+.table-lamp::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: #514437;
+    left: 10px;
+    top: 16px;
+}
+
+/* Badge */
+.photo .badge {
+    position: absolute !important;
+    top: 12px !important;
+    left: 12px !important;
+    z-index: 50 !important;
+}
